@@ -1,9 +1,15 @@
 import json
+import logging
+import os
 from flask import Flask, request
 from mgz.model import parse_match, serialize
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 8 * 1024 * 1024  # 8 MB
+if os.environ.get("LOG_LEVEL", "DEBUG") == "DEBUG":
+    app.logger.setLevel(logging.DEBUG)
+else:
+    app.logger.setLevel(logging.INFO)
 
 
 @app.get("/")
