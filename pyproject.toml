@@ -9,6 +9,7 @@ packages = [{include = "aoe2de_replay_parser"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 flask = "^3.1.0"
+mgz = "^1.8.27"
 
 
 [build-system]
