@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aoe2de-replay-parser"
+version = "0.1.0"
+description = ""
+authors = ["noracami <kerke.2011@gmail.com>"]
+readme = "README.md"
+packages = [{include = "aoe2de_replay_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
