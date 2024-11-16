@@ -19,7 +19,10 @@ def hello_world():
 
 @app.post("/analyze_replay")
 def analyze_replay():
+    print(request.files)
     replay = request.files.get("replay")
+    print(replay)
+
     if replay is None:
         return "You can provide a replay file", 200
 
