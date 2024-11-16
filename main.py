@@ -31,5 +31,5 @@ def analyze_replay():
     data = json.dumps(serialize(match), indent=2)
 
     # return first 10 lines of the data, encapsulated in a json object
-    return {"data": "\n".join(data.split("\n")[:10])}, 200
+    return {"data": list(data.split("\n")[:50])}, 200
     # return "\n".join(data.split("\n")[:10]), 200
